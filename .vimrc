@@ -27,13 +27,17 @@ set ruler
 " Enable automatic identing
 set autoindent
 set smartindent
-" Make tab characters appear as 4 spaces and indents as well
+" Make tab characters appear as 4 spaces
 set tabstop=4
-set shiftwidth=4
-set softtabstop=0
-set noexpandtab
-set shiftround
+" When expandtab is set, hitting Tab in insert mode will produce the appropriate number of spaces.
 set expandtab
+" Reindent operators will shift by 4 spaces, also affects automatic indentation
+set shiftwidth=4
+" Hitting TAB will insert the number of spaces defined in tabstop
+set softtabstop=0
+" Use a multiple of shiftwidth when indenting with '<' and '>'
+set shiftround
+" Insert tabs (spaces) on the start of line as defined in shiftwidth
 set smarttab
 " Do not wrap long lines
 set nowrap
