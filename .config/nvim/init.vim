@@ -39,6 +39,8 @@ set smarttab
 set nowrap
 " F2 key triggers disabling of identation when pasting
 set pastetoggle=<F2>
+" F3 key triggers line numbering
+map <F3> :set invnumber<CR>
 " Fix for some terminal emulators
 hi Normal guibg=NONE ctermbg=NONE
 " Disable mouse integration when running in "gui" mode
