@@ -43,10 +43,9 @@ set pastetoggle=<F2>
 map <F3> :set invnumber<CR>
 " Fix for some terminal emulators
 hi Normal guibg=NONE ctermbg=NONE
-" Disable mouse integration when running in "gui" mode
+" Disable mouse integration at all times
+set mouse=
+" Disable viminfo cache file
 set viminfo=
-if !has("gui_running")
-  set mouse=
-endif
 " Little hack to make editing ansible playbooks easier
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
