@@ -1,3 +1,3 @@
-## A collection of my usual config files for Linux / UNIX CLI environments.
+## A collection of my usual config files for Linux environments.
 
 Use at will.
