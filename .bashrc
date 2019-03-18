@@ -90,3 +90,4 @@ man() {
 #  . /usr/share/powerline/bindings/bash/powerline.sh
 #fi
 
+source $HOME/.do_token
