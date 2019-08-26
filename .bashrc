@@ -89,5 +89,3 @@ man() {
 #  POWERLINE_BASH_SELECT=1
 #  . /usr/share/powerline/bindings/bash/powerline.sh
 #fi
-
-source $HOME/.do_token
