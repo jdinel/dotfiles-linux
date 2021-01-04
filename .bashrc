@@ -40,7 +40,7 @@ fi
 
 GREP_COLORS='ms=01;33:mc=01;33:sl=:cx=:fn=35:ln=32:bn=32:se=36'
 PAGER="less -X"
-PATH=$PATH:/sbin:/usr/sbin:~/bin:/var/secops/scripts
+PATH=$PATH:/sbin:/usr/sbin:~/bin:home/joel/.local/bin
 complete -cf sudo
 complete -cf man
 umask 077
