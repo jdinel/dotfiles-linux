@@ -1,3 +1,4 @@
+alias diff='diff --color=auto'
 alias df='df -h'
 alias dmesg='sudo dmesg -T'
 alias docker='sudo docker'
