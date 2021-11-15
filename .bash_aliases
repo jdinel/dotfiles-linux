@@ -1,5 +1,4 @@
 alias df='df -h'
-alias diff='colordiff'
 alias dmesg='sudo dmesg -T'
 alias docker='sudo docker'
 alias egrep='LC_ALL="C" ionice -c3 nice egrep --color=auto --line-buffered'
