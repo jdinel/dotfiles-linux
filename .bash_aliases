@@ -1,3 +1,5 @@
+alias bcat='batcat'
+alias cat='batcat'
 alias diff='diff --color=auto'
 alias df='df -h'
 alias dmesg='sudo dmesg -T'
