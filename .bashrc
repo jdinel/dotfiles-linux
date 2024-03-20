@@ -71,17 +71,10 @@ else
 fi
 }
 
-# man function to colorize manpages
-man() {
-    env LESS_TERMCAP_mb=$'\E[01;31m' \
-    LESS_TERMCAP_md=$'\E[01;38;5;74m' \
-    LESS_TERMCAP_me=$'\E[0m' \
-    LESS_TERMCAP_se=$'\E[0m' \
-    LESS_TERMCAP_so=$'\E[38;5;246m' \
-    LESS_TERMCAP_ue=$'\E[0m' \
-    LESS_TERMCAP_us=$'\E[04;38;5;146m' \
-    man "$@"
-}
+# colorize manpages with batcat
+export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+
+# eval "$(starship init bash)"
 
 #if [ -f `which powerline-daemon` ]; then
 #  powerline-daemon -q
