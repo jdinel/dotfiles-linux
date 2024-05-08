@@ -1,6 +1,6 @@
 [user]
     name = Joel Dinel
-    email = joel@rsec.io
+    email = joel@dinel.io
 [core]
     autocrlf = input
     safecrlf = true
