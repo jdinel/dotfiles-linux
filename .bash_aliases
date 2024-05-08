@@ -1,7 +1,6 @@
 alias bcat='batcat'
 alias diff='diff --color=auto'
 alias df='df -h'
-alias dmesg='sudo dmesg -T'
 alias gencsr='openssl req -newkey rsa:2048 -nodes -sha256 -keyout privkey.pem -out myserver.csr'
 alias gpge='gpg --symmetric --armor --cipher-algo AES256'
 alias h='history'
