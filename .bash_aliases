@@ -1,4 +1,3 @@
-alias bcat='batcat'
 alias diff='diff --color=auto'
 alias df='df -h'
 alias gencsr='openssl req -newkey rsa:2048 -nodes -sha256 -keyout privkey.pem -out myserver.csr'
