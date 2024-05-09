@@ -55,5 +55,3 @@ PS1="\[$(tput bold)\]\[$(tput setaf 166)\]\u\[$(tput setaf 230)\]@\[$(tput setaf
 
 # colorize manpages with batcat
 export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
-
-# eval "$(starship init bash)"
