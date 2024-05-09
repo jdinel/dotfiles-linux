@@ -1,15 +1,8 @@
-[user]
-    name = Joel Dinel
-    email = joel@dinel.io
 [core]
     autocrlf = input
     safecrlf = true
     editor = vim
 [alias]
-    co = checkout
-    ci = commit
-    st = status
-    br = branch
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
     type = cat-file -t
     dump = cat-file -p
@@ -17,4 +10,3 @@
         default = simple
 [color]
         ui = auto
-        
