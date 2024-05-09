@@ -1,0 +1,96 @@
+# ~/.config/starship.toml
+
+# Set custom color palette
+palette = 'solarized_dark'
+
+# Define custom colors
+[palettes.solarized_dark]
+base03 = '#002b36'
+base02 = '#073642'
+base01 = '#586e75'
+base00 = '#657b83'
+base0 = '#839496'
+base1 = '#93a1a1'
+base2 = '#eee8d5'
+base3 = '#fdf6e3'
+yellow = '#b58900'
+orange = '#cb4b16'
+red = '#dc322f'
+magenta = '#d33682'
+violet = '#6c71c4'
+blue = '#268bd2'
+cyan = '#2aa198'
+green = '#859900'
+
+[battery]
+full_symbol = "🔋"
+charging_symbol = "🔌"
+discharging_symbol = "⚡"
+
+[[battery.display]]
+threshold = 30
+style = "red"
+
+[character]
+error_symbol = "[✖](red) "
+
+[cmd_duration]
+min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
+style = "green"
+format = "\nLast command took [$duration]($style)"
+
+[directory]
+truncation_length = 5
+style = "base2"
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+
+[git_branch]
+disabled = true
+format = " [$symbol$branch]($style) "
+symbol = "🍣 "
+style = "yellow"
+
+[git_commit]
+disabled = true
+commit_hash_length = 8
+style = "white"
+
+[git_state]
+disabled = true
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+
+[git_status]
+disabled = true
+conflicted = "⚔️ "
+ahead = "🏎️ 💨 ×${count}"
+behind = "🐢 ×${count}"
+diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🛤️  ×${count}"
+stashed = "📦 "
+modified = "📝 ×${count}"
+staged = "🗃️  ×${count}"
+renamed = "📛 ×${count}"
+deleted = "🗑️  ×${count}"
+style = "white"
+format = "$all_status$ahead_behind"
+
+[hostname]
+ssh_only = false
+#format = "<[$hostname]($style)>"
+format = "[$hostname]($style) @ "
+trim_at = "-"
+style = "base01"
+
+[memory_usage]
+format = "$symbol[${ram}( | ${swap})]($style) "
+threshold = 70
+style = "white"
+
+[time]
+time_format = "%T"
+format = "🕙 $time($style) "
+style = "white"
+
+[username]
+style_user = "orange"
+show_always = true
