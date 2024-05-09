@@ -1,7 +1,6 @@
 [core]
     autocrlf = input
     safecrlf = true
-    editor = vim
 [alias]
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
     type = cat-file -t
