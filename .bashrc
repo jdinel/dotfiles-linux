@@ -15,7 +15,6 @@ shopt -s histappend
 HISTSIZE=""
 HISTFILESIZE=""
 HISTTIMEFORMAT="%y/%m/%d %T "
-#HISTIGNORE="ssh *:scp *:sftp *"
 
 # Editor
 EDITOR=nvim
