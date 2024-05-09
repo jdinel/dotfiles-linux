@@ -10,7 +10,6 @@ alias lower="tr '[:upper:]' '[:lower:]'"
 alias ls='ls --color=yes -Fh'
 alias macextract="grep -Eoi '([0-9A-F]{2}[:-]){5}([0-9A-F]{2})'"
 alias psa="ps waux | egrep -v '\[.*\]'"
-alias ssh-insecure='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 alias upper="tr '[:lower:]' '[:upper:]'"
 alias vi='nvim'
 alias viewcert='openssl x509 -noout -text -in'
