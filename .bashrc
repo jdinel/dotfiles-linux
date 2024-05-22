@@ -51,12 +51,10 @@ alias ls='ls --color=yes -Fh'
 alias macextract="grep -Eoi '([0-9A-F]{2}[:-]){5}([0-9A-F]{2})'"
 alias psa="ps waux | egrep -v '\[.*\]'"
 alias upper="tr '[:lower:]' '[:upper:]'"
-alias vi='nvim'
 alias viewcert='openssl x509 -noout -text -in'
 alias viewcrl='openssl crl -inform DER -text -noout -in'
 alias viewcsr='openssl req -noout -text -in'
 alias viewp12='openssl pkcs12 -info -nodes -in'
-alias vim='nvim'
 
 # Load local aliases as well
 if [ -f ~/.bash_aliases ]; then
