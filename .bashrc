@@ -16,10 +16,10 @@ HISTSIZE=""
 HISTFILESIZE=""
 HISTTIMEFORMAT="%y/%m/%d %T "
 
-# Editor
-EDITOR=nvim
-VISUAL=nvim
-SUDO_EDITOR=nvim
+# Set preferred editor, nvim if installed, plan vi(m) if not
+which nvim > /dev/null && EDITOR=nvim
+which nvim > /dev/null && VISUAL=nvim
+which nvim > /dev/null && SUDO_EDITOR=nvim
 
 # Shortened path in prompt
 PROMPT_DIRTRIM=2
@@ -36,7 +36,7 @@ shopt -s checkwinsize
 #shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+which lesspipe > /dev/null && eval "$(SHELL=/bin/sh lesspipe)"
 
 alias diff='diff --color=auto'
 alias df='df -h'
@@ -71,8 +71,8 @@ eval "`dircolors ~/.dircolors`"
 
 PS1="\[$(tput bold)\]\[$(tput setaf 166)\]\u\[$(tput setaf 230)\]@\[$(tput setaf 166)\]\h \[$(tput setaf 33)\]\w \[$(tput setaf 64)\]$ \[$(tput sgr0)\]"
 
-# colorize manpages with batcat
-export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+# colorize manpages with batcat if installed
+which batcat > /dev/null && export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 
 # run starship if installed
 which starship > /dev/null && eval "$(starship init bash)"
