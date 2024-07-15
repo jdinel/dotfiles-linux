@@ -19,9 +19,13 @@ set laststatus=2
 " Do not highlight searches
 set nohlsearch
 " Enable incremental searches
-set incsearch
+set incsearch 
 " Case-insensitive searches
 set ignorecase
+" Case-sensitive searches if capital letter
+set smartcase
+" Highlight searches and provide live substituion previews
+set inccommand=split
 " Enable the Ruler (bottom right status)
 set ruler
 " Enable automatic identing
