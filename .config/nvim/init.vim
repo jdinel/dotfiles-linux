@@ -16,10 +16,8 @@ colorscheme solarized
 set number
 " Always display the status line
 set laststatus=2
-" Do not highlight searches
-set nohlsearch
 " Enable incremental searches
-set incsearch 
+set incsearch
 " Case-insensitive searches
 set ignorecase
 " Case-sensitive searches if capital letter
