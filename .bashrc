@@ -17,9 +17,9 @@ HISTFILESIZE=""
 HISTTIMEFORMAT="%y/%m/%d %T "
 
 # Set preferred editor, nvim if installed, plan vi(m) if not
-which nvim > /dev/null && EDITOR=nvim || EDITOR=vi
-which nvim > /dev/null && VISUAL=nvim || EDITOR=vi
-which nvim > /dev/null && SUDO_EDITOR=nvim || EDITOR=vi
+which nvim > /dev/null 2>&1 && EDITOR=nvim || EDITOR=vi
+which nvim > /dev/null 2>&1 && VISUAL=nvim || EDITOR=vi
+which nvim > /dev/null 2>&1 && SUDO_EDITOR=nvim || EDITOR=vi
 
 # Shortened path in prompt
 PROMPT_DIRTRIM=2
@@ -72,7 +72,7 @@ eval "`dircolors ~/.dircolors`"
 PS1="\[$(tput bold)\]\[$(tput setaf 166)\]\u\[$(tput setaf 230)\]@\[$(tput setaf 166)\]\h \[$(tput setaf 33)\]\w \[$(tput setaf 64)\]$ \[$(tput sgr0)\]"
 
 # colorize manpages with batcat if installed
-which batcat > /dev/null && export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+which batcat > /dev/null 2>&1 && export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 
 # run starship if installed
-which starship > /dev/null && eval "$(starship init bash)"
+which starship > /dev/null 2>&1 && eval "$(starship init bash)"
