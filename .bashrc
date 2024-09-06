@@ -74,6 +74,7 @@ PS1="\[$(tput bold)\]\[$(tput setaf 166)\]\u\[$(tput setaf 230)\]@\[$(tput setaf
 
 # colorize manpages with batcat if installed
 which batcat > /dev/null 2>&1 && export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+which bat > /dev/null 2>&1 && export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # run starship if installed
 which starship > /dev/null 2>&1 && eval "$(starship init bash)"
