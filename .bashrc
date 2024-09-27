@@ -18,8 +18,8 @@ HISTTIMEFORMAT="%y/%m/%d %T "
 
 # Set preferred editor, nvim if installed, plan vi(m) if not
 which nvim > /dev/null 2>&1 && EDITOR=nvim || EDITOR=vi
-which nvim > /dev/null 2>&1 && VISUAL=nvim || EDITOR=vi
-which nvim > /dev/null 2>&1 && SUDO_EDITOR=nvim || EDITOR=vi
+which nvim > /dev/null 2>&1 && VISUAL=nvim || VISUAL=vi
+which nvim > /dev/null 2>&1 && SUDO_EDITOR=nvim || SUDO_EDITOR=vi
 
 # Shortened path in prompt
 PROMPT_DIRTRIM=2
