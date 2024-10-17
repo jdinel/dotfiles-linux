@@ -64,7 +64,7 @@ fi
 
 GREP_COLORS='ms=01;33:mc=01;33:sl=:cx=:fn=35:ln=32:bn=32:se=36'
 PAGER="less -X"
-PATH=$PATH:/sbin:/usr/sbin:~/bin
+PATH=$PATH:~/bin
 complete -cf sudo
 complete -cf man
 umask 077
