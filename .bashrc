@@ -51,6 +51,7 @@ alias lower="tr '[:upper:]' '[:lower:]'"
 alias ls='ls --color=yes -Fh'
 alias macextract="grep -Eoi '([0-9A-F]{2}[:-]){5}([0-9A-F]{2})'"
 alias psa="ps waux | egrep -v '\[.*\]'"
+alias strws='awk '{$1=$1};1'
 alias upper="tr '[:lower:]' '[:upper:]'"
 alias viewcert='openssl x509 -noout -text -in'
 alias viewcrl='openssl crl -inform DER -text -noout -in'
