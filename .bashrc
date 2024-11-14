@@ -42,7 +42,6 @@ which lesspipe.sh > /dev/null 2>&1 && eval "$(SHELL=/bin/sh lesspipe.sh)"
 alias diff='diff --color=auto'
 alias df='df -h'
 alias gencsr='openssl req -newkey rsa:2048 -nodes -sha256 -keyout privkey.pem -out myserver.csr'
-alias gpge='gpg --symmetric --armor --cipher-algo AES256'
 alias h='history'
 alias ipextract="grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'"
 alias less='less -XR'
