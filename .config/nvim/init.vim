@@ -11,7 +11,7 @@ syntax enable
 " Force background to dark, fix for solarized-dark
 set background=dark
 " Set the prefered color scheme
-colorscheme solarized
+colorscheme neosolarized
 " Enable line numbering
 set number
 " Always display the status line
