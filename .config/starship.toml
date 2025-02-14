@@ -89,3 +89,6 @@ style = "white"
 [username]
 style_user = "orange"
 show_always = true
+
+[container]
+disabled = true
