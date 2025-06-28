@@ -7,6 +7,9 @@ esac
 # Let's get crazy
 unset HISTFILE
 
+# But let's stay safe
+set -o noclobber
+
 # Set preferred editor, nvim if installed, plan vi(m) if not
 which nvim > /dev/null 2>&1 && EDITOR=nvim || EDITOR=vi
 which nvim > /dev/null 2>&1 && VISUAL=nvim || VISUAL=vi
