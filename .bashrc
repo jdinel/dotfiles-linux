@@ -10,11 +10,6 @@ unset HISTFILE
 # But let's stay safe (disabling accidental overwrite of files with '>')
 set -o noclobber
 
-# Set preferred editor, nvim if installed, plan vi(m) if not
-which nvim > /dev/null 2>&1 && EDITOR=nvim || EDITOR=vi
-which nvim > /dev/null 2>&1 && VISUAL=nvim || VISUAL=vi
-which nvim > /dev/null 2>&1 && SUDO_EDITOR=nvim || SUDO_EDITOR=vi
-
 # Shortened path in prompt
 PROMPT_DIRTRIM=2
 
@@ -26,8 +21,7 @@ export LESSHISTFILE=-
 shopt -s checkwinsize
 
 # Make less more friendly for non-text input files, see lesspipe(1)
-which lesspipe > /dev/null 2>&1 && eval "$(SHELL=/bin/sh lesspipe)"
-which lesspipe.sh > /dev/null 2>&1 && eval "$(SHELL=/bin/sh lesspipe.sh)"
+eval "$(lesspipe)"
 
 # Basic aliases
 alias diff='diff --color=auto'
@@ -61,11 +55,6 @@ eval "`dircolors ~/.dircolors`"
 
 # Prompt
 PS1="\[$(tput bold)\]\[$(tput setaf 166)\]\u\[$(tput setaf 230)\]@\[$(tput setaf 166)\]\h \[$(tput setaf 33)\]\w \[$(tput setaf 64)\]$ \[$(tput sgr0)\]"
-
-# Colorize manpages with batcat if installed (this could move to .bashrc_local)
-which batcat > /dev/null 2>&1 && export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
-which bat > /dev/null 2>&1 && export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-export MANROFFOPT="-c"
 
 # Load .bashrc_local for overrides
 if [ -f ~/.bashrc_local ]; then
