@@ -64,5 +64,7 @@ which batcat > /dev/null 2>&1 && export MANPAGER="sh -c 'col -bx | batcat -l man
 which bat > /dev/null 2>&1 && export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 
-# run starship if installed
-which starship > /dev/null 2>&1 && eval "$(starship init bash)"
+# Load .bashrc_local for overrides
+if [ -f ~/.bashrc_local ]; then
+    . ~/.bashrc_local
+fi
