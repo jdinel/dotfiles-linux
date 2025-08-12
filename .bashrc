@@ -4,10 +4,10 @@ case $- in
       *) return;;
 esac
 
-# Let's get crazy
+# Let's get crazy (unsetting history)
 unset HISTFILE
 
-# But let's stay safe
+# But let's stay safe (disabling accidental overwrite of files with '>')
 set -o noclobber
 
 # Set preferred editor, nvim if installed, plan vi(m) if not
@@ -21,14 +21,15 @@ PROMPT_DIRTRIM=2
 # Prevent gnu less from writing a history file
 export LESSHISTFILE=-
 
-# check the window size after each command and, if necessary,
+# Check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# make less more friendly for non-text input files, see lesspipe(1)
+# Make less more friendly for non-text input files, see lesspipe(1)
 which lesspipe > /dev/null 2>&1 && eval "$(SHELL=/bin/sh lesspipe)"
 which lesspipe.sh > /dev/null 2>&1 && eval "$(SHELL=/bin/sh lesspipe.sh)"
 
+# Basic aliases
 alias diff='diff --color=auto'
 alias df='df -h'
 alias gencsr='openssl req -newkey rsa:2048 -nodes -sha256 -keyout privkey.pem -out myserver.csr'
@@ -49,6 +50,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Misc preferences
 GREP_COLORS='ms=01;33:mc=01;33:sl=:cx=:fn=35:ln=32:bn=32:se=36'
 PAGER="less -XRF"
 PATH=$PATH:~/bin
@@ -57,9 +59,10 @@ complete -cf man
 umask 077
 eval "`dircolors ~/.dircolors`"
 
+# Prompt
 PS1="\[$(tput bold)\]\[$(tput setaf 166)\]\u\[$(tput setaf 230)\]@\[$(tput setaf 166)\]\h \[$(tput setaf 33)\]\w \[$(tput setaf 64)\]$ \[$(tput sgr0)\]"
 
-# colorize manpages with batcat if installed
+# Colorize manpages with batcat if installed (this could move to .bashrc_local)
 which batcat > /dev/null 2>&1 && export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 which bat > /dev/null 2>&1 && export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
